@@ -1,0 +1,6 @@
+{
+  "name": "Elite Pune Property Portfolio",
+  "description": "Exclusive 3 BHK luxury resale residence portfolio in Central Pune featuring attached private terrace, covered car parking, and interactive virtual photo tour.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Pune Property Portfolio - 3 BHK Resale</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --dark: #2d3748;
+            --light: #f7fafc;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f0f4f8;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 24px;
+        }
+        
+        h3 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+            margin-top: 50px;
+            font-size: 22px;
+        }
+        
+        h4 {
+            color: var(--dark);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            background-color: var(--light);
+            padding: 12px 20px;
+            border-left: 5px solid var(--secondary);
+            border-radius: 0 6px 6px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .location {
+            text-align: center;
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .metric-box {
+            background-color: #ebf8ff;
+            border: 1px solid #bee3f8;
+            padding: 20px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: var(--secondary);
+            font-size: 16px;
+            box-shadow: 0 2px 5px var(--shadow);
+        }
+        
+        .metric-box span {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+            color: #4a5568;
+            margin-top: 6px;
+        }
+        
+        .quick-highlights {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .quick-highlights li {
+            background: #f0fff4;
+            border: 1px solid #c6f6d5;
+            color: #22543d;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+        }
+        
+        ul.detailed-list {
+            padding-left: 20px;
+            margin-bottom: 35px;
+        }
+        
+        ul.detailed-list li {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .video-container {
+            text-align: center;
+            margin: 40px 0;
+            background-color: #fff5f5;
+            border: 1px solid #fed7d7;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px var(--shadow);
+        }
+        
+        .video-btn {
+            display: inline-block;
+            background-color: #e53e3e;
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        
+        .video-btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        /* PREMIUM IMAGE GALLERY SYSTEM */
+        .gallery-block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+        
+        .gallery-block.full-width {
+            grid-template-columns: 1fr;
+        }
+        
+        .photo-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .photo-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gallery-block.full-width .photo-card img {
+            height: 500px;
+        }
+
+        /* DUAL SUB-GRID FOR COMBINED BEDROOM ROOM VIEWS */
+        .sub-image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 15px;
+            background-color: var(--light);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sub-image-grid img {
+            height: 320px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        
+        .photo-info {
+            padding: 20px;
+            flex-grow: 1;
+            background-color: #ffffff;
+        }
+        
+        .photo-info strong {
+            display: block;
+            font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .photo-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0 50px 0;
+            box-shadow: 0 4px 12px var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+        }
+        
+        th {
+            background-color: #f8fafc;
+            color: var(--primary);
+            font-weight: 700;
+            width: 30%;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 10px 25px rgba(26, 54, 93, 0.2);
+        }
+        
+        .cta-box h3 {
+            color: white;
+            border: none;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        
+        .cta-box p {
+            font-size: 16px;
+            color: #e2e8f0;
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 18px;
+            font-weight: 600;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: #63b3ed;
+            text-decoration: none;
+            border-bottom: 1px dashed #63b3ed;
+            padding-bottom: 2px;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: #90cdf4;
+        }
+
+        @media (max-width: 768px) {
+            .metrics-grid, .quick-highlights, .gallery-block, .sub-image-grid {
+                grid-template-columns: 1fr !important;
+            }
+            body { padding: 10px; }
+            .container { padding: 25px; }
+            .photo-card img, .gallery-block.full-width .photo-card img, .sub-image-grid img { height: 280px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>★ Exclusive Resale Offering</h1>
+    <h2>Luxury 3 BHK Residence</h2>
+    <div class="location">📍 Central Pune</div>
+
+    <div class="metrics-grid">
+        <div class="metric-box">1,235 SQ FT<span>Built-Up Flat Area</span></div>
+        <div class="metric-box">+102 SQ FT<span>Attached Private Terrace</span></div>
+        <div class="metric-box">+100 SQ FT<span>Covered Car Park</span></div>
+        <div class="metric-box">1,437 SQ FT<span>Total Usable Space</span></div>
+    </div>
+
+    <ul class="quick-highlights">
+        <li>✓ Auspicious East Vastu</li>
+        <li>✓ Reliable 24x7 PMC Water</li>
+        <li>✓ Zero Corridor Space Wastage</li>
+    </ul>
+
+    <h3>Elite Specifications & Architectural Highlights</h3>
+    <ul class="detailed-list">
+        <li><strong>☀️ Auspicious East Entrance:</strong> Highly preferred, 100% Vastu-compliant East-facing main entrance welcoming continuous morning solar energy, excellent cross-ventilation, and fostering positive family prosperity.</li>
+        <li>🌿 Beautiful Attached Private Terrace: 102 sq ft private attached terrace directly accessible from the living room via French sliding glass doors, fitted with an outdoor pergola cover and skylight for peaceful morning tea or evening entertaining.</li>
+        <li><strong>🚗 Dedicated Covered Car Parking:</strong> Dedicated covered car parking bay of 100 sq ft inside the premises — an invaluable, stress-free luxury in Central Pune where reserved covered parking is virtually non-existent.</li>
+        <li><strong>💧 Reliable 24x7 PMC Water Supply:</strong> Direct Pune Municipal Corporation (PMC) sweet drinking water line with excellent pressure and zero dependency on costly, irregular private water tankers.</li>
+    </ul>
+
+    <h3>Strategic Location & Neighborhood Infrastructure</h3>
+    <ul class="detailed-list">
+        <li><strong>🛍️ Shopping & Heritage (5-Min Walk):</strong> Situated right next to Sadashiv Peth & Subhash Nagar. Just a 5 to 10-minute walk to Laxmi Road, Tulshibaug Bazaar, and Mahatma Phule Mandai for daily fresh produce and festive shopping.</li>
+        <li><strong>🚇 Metro & Transit Links:</strong> Quick effortless access to Mandai Metro Station (Pune Metro Purple Line) and Swargate Multi-Modal ST Stand (~1.5 km), offering swift connectivity to Shivaji Nagar, Hinjawadi & Camp.</li>
+        <li><strong>🏫 Premier Educational Hub:</strong> Surrounded by Pune's best educational landmarks: Jnana Prabodhini Prashala, NMV High School, Sir Parashurambhau (SP) College, and Fergusson College all within 5 to 12 minutes.</li>
+        <li><strong>🏥 Healthcare & Daily Essentials:</strong> Top multi-specialty hospitals (Poona Hospital, Sahyadri Hospital, Deenanath Mangeshkar Hospital), major nationalized banks, medical centers, and historic temples all within a 3-km radius.</li>
+    </ul>
+
+    <h3>Visual Photographic Tour & Editorial Spreads</h3>
+    
+    <div class="video-container">
+        <p style="margin-top:0; font-weight:bold; color:#c53030;">🎥 VIRTUAL WALKTHROUGH VIDEO AVAILABLE</p>
+        <p style="font-size:14px; margin-bottom:15px; color:#4a5568;">Watch the high-definition walkthrough layout tour of this premium asset:</p>
+        <a href="https://www.youtube.com/shorts/lUrZfUptrxA" target="_blank" class="video-btn">Click Here to Watch on YouTube</a>
+    </div>
+
+    <h4>Spread A: Living & Dining Suite</h4>
+    
+    <div class="gallery-block full-width">
+        <div class="photo-card">
+            <img src="HALL_View1.jpg" alt="Living Room Hero View">
+            <div class="photo-info">
+                <strong>📷 [PHOTO 1 • LIVING ROOM HERO VIEW & ENTRY FOYER]</strong>
+                <p>Spacious rectangular family hall featuring a designer false ceiling, recessed ambient lighting, and a direct walkout to the private terrace via glass sliding doors. This main perspective provides visibility towards the 100% Vastu-compliant East-facing entry foyer area fitted with its heavy-duty custom safety protection grill layout.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-block">
+        <div class="photo-card">
+            <img src="Hall_View2.jpg" alt="Living Room Seating Layout">
+            <div class="photo-info">
+                <strong>📷 Photo 2 • Expansive Layout</strong>
+                <p>Accommodates large family sofa sets and entertainment consoles with premium tile flooring and optimal daylight entrance cascades.</p>
+            </div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="Hall_View3.jpg" alt="L Shaped Dining Sofa Space">
+            <div class="photo-info">
+                <strong>📷 Photo 3 • Dining &amp; Passage View</strong>
+                <p>Clean flooring perspective showcasing the custom integrated seating lounge space and zero layout wastage in circulation corridors.</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Spread B: Premium Outdoor Living & Foyer</h4>
+    
+    <div class="gallery-block full-width">
+        <div class="photo-card">
+            <div class="sub-image-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <img src="Terrace1.jpg" alt="Private Attached Terrace Area">
+                <img src="TerraceFromHall.jpg" alt="Terrace Walkout View from Hall">
+            </div>
+            <div class="photo-info">
+                <strong>📷 Photo 4 &amp; 5 • Private Attached Terrace &amp; Walkout Aspect</strong>
+                <p>102 sq ft private attached outdoor area with custom safety gate structural styling, overhead clear framing, artificial green foliage privacy screening overlays, and open cross ventilation airflow. Transition seamlessly looking through the full-height glass sliding French doors from the living room environment.</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Spread C: Culinary Comfort</h4>
+    
+    <div class="gallery-block">
+        <div class="photo-card">
+            <img src="Kitchen_View1.jpg" alt="Spacious Modular Kitchen Setup">
+            <div class="photo-info">
+                <strong>📷 Photo 6 • Cooking Counter Core</strong>
+                <p>Spacious modular kitchen featuring premium green-and-white cabinetry layouts, an L-shaped polished black granite counter surface, and deep embedded stainless steel wash basins.</p>
+            </div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="Kichen_View2.jpg" alt="Spacious Kitchen Dining Layout">
+            <div class="photo-info">
+                <strong>📷 Photo 7 • Kitchen Dining Space Matrix</strong>
+                <p>Generous open layout utility frame showcasing custom glass-paneled storage cabinets and ample dedicated floor space provisions for double door refrigerator placement profiles.</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Spread D: Private Bed Suites</h4>
+    
+    <div class="gallery-block">
+        <div class="photo-card">
+            <img src="MasterBedRoom_View1.jpg" alt="Master Bedroom Setup View">
+            <div class="photo-info">
+                <strong>📷 [PHOTO 8 • MASTER SUITE HERO]</strong>
+                <p>Generous master bedroom retreat accommodating a king-size configuration frame, clean detailed functional wall alcoves, cooling ceiling fan systems, and wide perimeter window structures.</p>
+            </div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="MasterBedRoom_View2.jpg" alt="Master Bedroom Secondary Profile View">
+            <div class="photo-info">
+                <strong>📷 Master Bed Space • Alternative Profile Angle</strong>
+                <p>Secondary clean plaster finish wall profile viewing aspect highlighting clear floor tile reflections, smooth paint finishes, and distinct entertainment connection terminals.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-block full-width">
+        <div class="photo-card">
+            <img src="MasterBedRoom_View3.jpg" alt="Master Suite Built-In Storage">
+            <div class="photo-info">
+                <strong>📷 Photo 9 &amp; 10 • Wardrobe Niche &amp; Master Suite Perspective</strong>
+                <p>Dedicated architectural wall niche utilizing heavy built-in premium natural wood-finish floor-to-ceiling wardrobes and high vertical overhead lofts maximizing structural footprint utility metrics.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-block">
+        <div class="photo-card">
+            <img src="BedRoom1_View1.jpg" alt="Parents Bedroom Main Aspect">
+            <div class="photo-info">
+                <strong>📷 Photo 11 • Parents Bedroom (BR 1) Entry Frame</strong>
+                <p>Square room orientation dimensions carefully optimized to accommodate senior family members comfortably with easy single level transition pathways directly into the core culinary suite.</p>
+            </div>
+        </div>
+        
+        <div class="photo-card">
+            <img src="BedRoom1_View2.jpg" alt="Parents Bedroom Wardrobe Detail">
+            <div class="photo-info">
+                <strong>📷 Parents BR Profile • Storage Layout Matrix</strong>
+                <p>Built-in wooden corner wardrobe cabinets paired with dual integrated concrete vertical storage lofts running across the upper margins to house heavy seasonal materials clean out of view.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-block">
+        <div class="photo-card" style="grid-column: span 2;">
+            <img src="BedRoom1_View3.jpg" alt="Parents Bedroom Natural Cross Ventilation Profile" style="height: 450px;">
+            <div class="photo-info">
+                <strong>📷 Photo 12 &amp; 13 • Parents BR Cross Ventilation &amp; Loft Spreads</strong>
+                <p>Deep interior perspective displaying soft ambient room wall coloring blends, pristine floor tiles, and cheerful ambient window drapery setups ensuring continuous fresh natural airflow vectors paired with reinforced concrete lofts.</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Spread E: Unified Kids / Study Bedroom Suite</h4>
+
+    <div class="gallery-block full-width">
+        <div class="photo-card">
+            <div class="sub-image-grid">
+                <img src="BedRoom2_View1.jpg" alt="Kids Study Bedroom Entrance Layout">
+                <img src="BedRoom2_View2.jpg" alt="Kids Bedroom Window Ventilation Spread">
+            </div>
+            <div class="photo-info">
+                <strong>📷 Photo 14 &amp; 15 • Kids / Study Room (BR 2) Combined Perspectives</strong>
+A comfortable, quiet multi-functional bedroom zone optimized perfectly for a learning setup, study desk, or remote work-from-home layout. The left angle highlights dynamic custom purple-and-white striped accent wall panels and built-in wooden storage. The right angle showcases the wide sliding exterior window ventilation setups and integrated structural lofts maximizing vertical space utility metrics.</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Executive Summary Sheet & Metric Breakdown</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Property Parameter</th>
+                <th>Executive Details & Specifications</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Configuration</strong></td>
+                <td>Spacious 3 BHK Residential Flat (3 Bedrooms + Living Hall + Kitchen + Private Terrace)</td>
+            </tr>
+            <tr>
+                <td><strong>Built-Up Flat Area</strong></td>
+                <td>1,235 Sq Ft </td>
+            </tr>
+            <tr>
+                <td><strong>Attached Private Terrace</strong></td>
+                <td>+ 102 Sq Ft (Direct walkout from living room with pergola cover)</td>
+            </tr>
+            <tr>
+                <td><strong>Covered Car Parking</strong></td>
+                <td>+ 100 Sq Ft (Dedicated covered bay inside building premises — rare asset)</td>
+            </tr>
+            <tr>
+                <td><strong>Total Composite Usable Space</strong></td>
+                <td>1,437 Sq Ft Total Usable Living & Parking Asset</td>
+            </tr>
+            <tr>
+                <td><strong>Vastu Orientation</strong></td>
+                <td>100% Auspicious East-Facing Main Entrance Door</td>
+            </tr>
+            <tr>
+                <td><strong>Water Supply</strong></td>
+                <td>PMC (Pune Municipal Corporation) sweet water supply (zero tanker dependence)</td>
+            </tr>
+            <tr>
+                <td><strong>Location & Postal Code</strong></td>
+                <td>Sadashiv Peth & Subhash Nagar border, Central Pune, PIN 411002</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="cta-box">
+        <h3>📞 Schedule a Private Viewing Today</h3>
+        <p>This rare 3 BHK residential space in historic Central Pune featuring a private terrace and dedicated covered car parking is in high demand. Contact directly for private pricing disclosures, complete floor plan consultation, or an inspection visit window assignment.</p>
+        <div class="contact-info">
+            <span><strong>WhatsApp:</strong> <a href="tel:+919767641539">+91 9767641539</a></span>
+            <span><strong>Email:</strong> <a href="mailto:sam.pune.property@gmail.com">sam.pune.property@gmail.com</a></span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

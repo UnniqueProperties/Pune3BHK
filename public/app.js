@@ -7,7 +7,7 @@
 const PROPERTY_PHOTOS = [
   {
     id: 1,
-    file: 'assets/aistudio/HALL_View1_df0b1bee.jpg',
+    file: 'HALL_View1.jpg',
     fallback: 'HALL_View1.jpg',
     category: 'living',
     spread: 'Spread A • Living Suite',
@@ -18,7 +18,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 2,
-    file: 'assets/aistudio/Hall_View2_4574ff84.jpg',
+    file: 'Hall_View2.jpg',
     fallback: 'Hall_View2.jpg',
     category: 'living',
     spread: 'Spread A • Living Suite',
@@ -28,7 +28,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 3,
-    file: 'assets/aistudio/Hall_View3_afffa04c.jpg',
+    file: 'Hall_View3.jpg',
     fallback: 'Hall_View3.jpg',
     category: 'living',
     spread: 'Spread A • Living Suite',
@@ -38,7 +38,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 4,
-    file: 'assets/aistudio/Terrace1_a3ba94fc.jpg',
+    file: 'Terrace1.jpg',
     fallback: 'Terrace1.jpg',
     category: 'terrace',
     spread: 'Spread B • Outdoor Terrace',
@@ -48,7 +48,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 5,
-    file: 'assets/aistudio/TerraceFromHall_a0c63c01.jpg',
+    file: 'TerraceFromHall.jpg',
     fallback: 'TerraceFromHall.jpg',
     category: 'terrace',
     spread: 'Spread B • Outdoor Terrace',
@@ -58,7 +58,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 6,
-    file: 'assets/aistudio/Kitchen_View1_66cb25ae.jpg',
+    file: 'Kitchen_View1.jpg',
     fallback: 'Kitchen_View1.jpg',
     category: 'kitchen',
     spread: 'Spread C • Culinary Suite',
@@ -68,7 +68,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 7,
-    file: 'assets/aistudio/Kichen_View2_db7ed332.jpg',
+    file: 'Kichen_View2.jpg',
     fallback: 'Kichen_View2.jpg',
     category: 'kitchen',
     spread: 'Spread C • Culinary Suite',
@@ -78,7 +78,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 8,
-    file: 'assets/aistudio/MasterBedRoom_View1_e9d536cc.jpg',
+    file: 'MasterBedRoom_View1.jpg',
     fallback: 'MasterBedRoom_View1.jpg',
     category: 'master',
     spread: 'Spread D • Master Suite',
@@ -88,7 +88,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 9,
-    file: 'assets/aistudio/MasterBedRoom_View2_71a8a5de.jpg',
+    file: 'MasterBedRoom_View2.jpg',
     fallback: 'MasterBedRoom_View2.jpg',
     category: 'master',
     spread: 'Spread D • Master Suite',
@@ -98,7 +98,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 10,
-    file: 'assets/aistudio/MasterBedRoom_View3_5e5b88af.jpg',
+    file: 'MasterBedRoom_View3.jpg',
     fallback: 'MasterBedRoom_View3.jpg',
     category: 'master',
     spread: 'Spread D • Master Suite',
@@ -108,7 +108,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 11,
-    file: 'assets/aistudio/BedRoom1_View1_ca33c4fe.jpg',
+    file: 'BedRoom1_View1.jpg',
     fallback: 'BedRoom1_View1.jpg',
     category: 'bed1',
     spread: 'Spread D • Parents Bedroom (BR 1)',
@@ -118,7 +118,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 12,
-    file: 'assets/aistudio/BedRoom1_View2_410626ea.jpg',
+    file: 'BedRoom1_View2.jpg',
     fallback: 'BedRoom1_View2.jpg',
     category: 'bed1',
     spread: 'Spread D • Parents Bedroom (BR 1)',
@@ -128,7 +128,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 13,
-    file: 'assets/aistudio/BedRoom1_View3_0f856307.jpg',
+    file: 'BedRoom1_View3.jpg',
     fallback: 'BedRoom1_View3.jpg',
     category: 'bed1',
     spread: 'Spread D • Parents Bedroom (BR 1)',
@@ -138,7 +138,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 14,
-    file: 'assets/aistudio/BedRoom2_View1_4799d641.jpg',
+    file: 'BedRoom2_View1.jpg',
     fallback: 'BedRoom2_View1.jpg',
     category: 'bed2',
     spread: 'Spread E • Kids / Study Suite (BR 2)',
@@ -148,7 +148,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 15,
-    file: 'assets/aistudio/BedRoom2_View2_d58065c6.jpg',
+    file: 'BedRoom2_View2.jpg',
     fallback: 'BedRoom2_View2.jpg',
     category: 'bed2',
     spread: 'Spread E • Kids / Study Suite (BR 2)',
@@ -158,7 +158,7 @@ const PROPERTY_PHOTOS = [
   },
   {
     id: 16,
-    file: 'assets/aistudio/Entrance_dd8b391a.jpg',
+    file: 'Entrance.jpg',
     fallback: 'Entrance.jpg',
     category: 'entrance',
     spread: 'Architectural Foyer',
@@ -175,7 +175,7 @@ const SPACES_DATA = [
     name: 'Living & Dining Hall',
     dims: "19' 0\" × 11' 0\"",
     sqft: '210 Sq Ft',
-    previewImg: 'assets/aistudio/HALL_View1_df0b1bee.jpg',
+    previewImg: 'HALL_View1.jpg',
     fallbackImg: 'HALL_View1.jpg',
     desc: 'Expansive family hall with recessed LED cove lighting, designer false ceiling, vitrified tiles, and direct French door connectivity to the private terrace.',
     features: ['False Ceiling with LEDs', 'Terrace Walkout French Doors', 'Zero Circulation Wastage', 'East Sunlight Vector']
@@ -185,7 +185,7 @@ const SPACES_DATA = [
     name: 'Attached Private Terrace',
     dims: "12' 0\" × 8' 6\"",
     sqft: '102 Sq Ft',
-    previewImg: 'assets/aistudio/Terrace1_a3ba94fc.jpg',
+    previewImg: 'Terrace1.jpg',
     fallbackImg: 'Terrace1.jpg',
     desc: 'Rare attached outdoor sanctuary directly extending from living hall. Fitted with sturdy safety iron framing, skylight cover, and privacy foliage screen.',
     features: ['Attached to Living Room', 'Pergola & Skylight Shield', 'Open Air Cross Breeze', 'Private Morning Tea Deck']
@@ -195,7 +195,7 @@ const SPACES_DATA = [
     name: 'Modular Kitchen & Utility',
     dims: "14' 0\" × 10' 0\"",
     sqft: '140 Sq Ft',
-    previewImg: 'assets/aistudio/Kitchen_View1_66cb25ae.jpg',
+    previewImg: 'Kitchen_View1.jpg',
     fallbackImg: 'Kitchen_View1.jpg',
     desc: 'Large L-shaped polished black granite cooking platform with modular green & white drawers, deep stainless sink, overhead storage, and refrigerator alcove.',
     features: ['Black Granite Countertops', 'Modular Under-Counter Pullouts', 'PMC Sweet Drinking Water Tap', 'Double Fridge Provision']
@@ -205,7 +205,7 @@ const SPACES_DATA = [
     name: 'Master Bedroom Suite',
     dims: "15' 0\" × 12' 0\"",
     sqft: '180 Sq Ft',
-    previewImg: 'assets/aistudio/MasterBedRoom_View1_e9d536cc.jpg',
+    previewImg: 'MasterBedRoom_View1.jpg',
     fallbackImg: 'MasterBedRoom_View1.jpg',
     desc: 'Generous master bedroom accommodating a king-size bed, private dressing vanity corridor, floor-to-ceiling wooden wardrobes, and high concrete storage lofts.',
     features: ['King Bed Footprint', 'Built-in Floor-to-Ceiling Wardrobe', 'High Concrete Loft Storage', 'Large Window Frame']
@@ -215,7 +215,7 @@ const SPACES_DATA = [
     name: 'Parents Bedroom (BR 1)',
     dims: "12' 0\" × 11' 0\"",
     sqft: '132 Sq Ft',
-    previewImg: 'assets/aistudio/BedRoom1_View1_ca33c4fe.jpg',
+    previewImg: 'BedRoom1_View1.jpg',
     fallbackImg: 'BedRoom1_View1.jpg',
     desc: 'Ground-level transition room ideally configured for senior members of the household. Easy access to main living spaces with private wardrobe niche.',
     features: ['Senior-Friendly Single Level', 'Corner Wardrobe Matrix', 'Dual Concrete Lofts', 'Bright Window Ventilation']
@@ -225,7 +225,7 @@ const SPACES_DATA = [
     name: 'Kids / Study Bedroom (BR 2)',
     dims: "11' 0\" × 10' 0\"",
     sqft: '110 Sq Ft',
-    previewImg: 'assets/aistudio/BedRoom2_View1_4799d641.jpg',
+    previewImg: 'BedRoom2_View1.jpg',
     fallbackImg: 'BedRoom2_View1.jpg',
     desc: 'Cheerful bedroom with modern striped accent paneling, wide sliding windows, integrated lofts, and ideal acoustics for remote work or study.',
     features: ['Work-from-Home / Study Ready', 'Dual Tone Accent Wall', 'Sliding Aluminum Windows', 'Built-in Storage']
@@ -235,7 +235,7 @@ const SPACES_DATA = [
     name: 'East Entrance Foyer & Parking',
     dims: "100 Sq Ft Car Bay",
     sqft: '100 Sq Ft Car Park',
-    previewImg: 'assets/aistudio/Entrance_dd8b391a.jpg',
+    previewImg: 'Entrance.jpg',
     fallbackImg: 'Entrance.jpg',
     desc: '100% Vastu-compliant East main door with heavy-duty safety grill, plus a dedicated 100 sq ft covered car parking bay inside premises (exceptional Central Pune asset).',
     features: ['100% East Vastu Door', 'Heavy Ornamental Grill Door', 'Dedicated Covered Parking Bay', 'Zero Wastage Corridor']

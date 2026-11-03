@@ -1999,3 +1999,59 @@ html, body {
     text-align: center;
   }
 }
+
+/* --- DATA TABLE RESPONSIVE LAYOUT --- */
+@media (max-width: 768px) {
+  /* Find your specification table elements */
+  table, thead, tbody, th, td, tr {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hide the desktop header row entirely on mobile */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* Make each table row look like an individual clean layout card */
+  tr {
+    margin-bottom: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  /* Format individual table cells */
+  td {
+    border: none !important;
+    padding: 6px 0 !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left !important;
+    white-space: normal !important; /* Allow long words to wrap wrap safely */
+  }
+
+  /* Make the parameter title bold and standout */
+  td:first-child {
+    font-weight: bold !important;
+    color: #1a202c; /* Darker clean professional color */
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+
+  /* Format the value details below it */
+  td:last-child {
+    color: #4a5568; /* Elegant slate profile font */
+    font-size: 0.9rem;
+    padding-bottom: 8px !important;
+  }
+}
+

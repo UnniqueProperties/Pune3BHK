@@ -1891,3 +1891,57 @@ button, input, select, textarea {
   .lightbox-nav-arrow.next { right: 10px; }
   .specs-table th { width: 40%; }
 }
+
+/* --- MOBILE RESPONSIVE LAYER --- */
+@media (max-width: 768px) {
+  /* Prevent horizontal screen scrolling */
+  body, html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  /* Force container blocks to stack instead of spreading wide */
+  .container, .grid, .flex-row, .row, section {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Stop multi-column grids from crushing rows */
+  .grid-3-col, .grid-2-col, .grid-4-col, .photo-grid, .stats-container {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+
+  /* Keep hero photography bounded */
+  img, .hero-image, .gallery-thumb {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  /* Stack main features side-by-side specs */
+  table, thead, tbody, th, td, tr {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  /* Fix navigation menu items overlapping text */
+  nav, .navbar-menu {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+}
+

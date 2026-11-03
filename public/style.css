@@ -1945,3 +1945,47 @@ button, input, select, textarea {
   }
 }
 
+/* --- CRITICAL HORIZONTAL FIX --- */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit !important;
+}
+
+@media (max-width: 768px) {
+  /* Prevent sections from blowing past the viewport bounds */
+  main, section, header, footer, div, .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force tables with long details to scroll internally rather than breaking the layout */
+  table, .table-wrapper, .specs-table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Break up any long string texts or phone numbers forcing layout growth */
+  p, h1, h2, h3, h4, span, a, td {
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Ensure hero frames shrink smoothly */
+  .hero-container, .hero-section, .banner-image {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+

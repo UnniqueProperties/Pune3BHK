@@ -1945,47 +1945,57 @@ button, input, select, textarea {
   }
 }
 
-/* --- CRITICAL HORIZONTAL FIX --- */
+/* ==========================================================================
+   CLEAN MOBILE LAYOUT OVERRIDES 
+   ========================================================================== */
+
+/* 1. Global Page Boundary Lock (Stops the side-to-side scrolling & whitespace) */
 html, body {
   width: 100% !important;
   max-width: 100% !important;
   overflow-x: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit !important;
-}
-
+/* 2. Target Mobile Viewports Gently */
 @media (max-width: 768px) {
-  /* Prevent sections from blowing past the viewport bounds */
-  main, section, header, footer, div, .container {
+  
+  /* Prevent sections or template containers from expanding too wide */
+  .container, section, main, header, footer {
     max-width: 100% !important;
+    width: 100% !important;
     overflow-x: hidden !important;
-    box-sizing: border-box !important;
   }
 
-  /* Force tables with long details to scroll internally rather than breaking the layout */
-  table, .table-wrapper, .specs-table {
+  /* Safely let data grids scale downwards dynamically */
+  .grid, [class*="grid-"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* Stack elements one below the other */
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  /* Make sure images scale down inside containers */
+  img, .hero-image, .gallery-img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: 100% !important;
+    object-fit: cover;
+  }
+
+  /* Fix data tables from sticking out */
+  table, .specs-table, .landmark-table {
     display: block !important;
     width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: auto !important; /* Make table scrollable left-right internally if too wide */
+    white-space: nowrap;
   }
 
-  /* Break up any long string texts or phone numbers forcing layout growth */
-  p, h1, h2, h3, h4, span, a, td {
-    word-wrap: break-word !important;
-    word-break: break-word !important;
-    white-space: normal !important;
-  }
-
-  /* Ensure hero frames shrink smoothly */
-  .hero-container, .hero-section, .banner-image {
-    max-width: 100% !important;
-    width: 100% !important;
+  /* Fix hero section overlays from breaking */
+  .hero-content, .hero-box {
+    padding: 16px !important;
+    text-align: center;
   }
 }
-
